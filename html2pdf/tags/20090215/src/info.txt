@@ -1,0 +1,6 @@
+author Daniel Stonier
+email  d.stonier@gmail.com
+date   2009-02-15
+name   Html2Pdf
+desc   Html to Pdf converter
+url    http://snorriheim.dnsdojo.com/redmine/projects/show/html2pdf

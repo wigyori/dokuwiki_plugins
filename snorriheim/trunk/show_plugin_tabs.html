@@ -1,0 +1,29 @@
+<?php 
+  $odt_plugin = &plugin_load('syntax','multilingual');
+  if ( $odt_plugin ) {
+    if ( plugin_isdisabled($odt_plugin->getPluginName() ) ) {
+      $odt_plugin == NULL;
+    }
+  }
+  $pdf_plugin = &plugin_load('action','html2pdf');
+  if ( $pdf_plugin ) {
+    if ( plugin_isdisabled($pdf_plugin->getPluginName() ) ) {
+      $pdf_plugin == NULL;
+    }
+  }
+
+  if ( $odt_plugin ) {
+    print '<li>'.DOKU_LF;
+    print '  <a href="';
+      echo exportlink($ID, '.odt');
+      print '" class="action odt" rel="nofollow">'.$lang['export_odt'].'</a>'.DOKU_LF;
+    print '</li>'.DOKU_LF;
+  }
+  if ( $pdf_plugin ) {
+    print '<li>'.DOKU_LF;
+    print '  <a href="';
+      echo exportlink($ID, 'pdf');
+      print '" class="action tab_pdf" rel="nofollow">'.$lang['export_pdf'].'</a>'.DOKU_LF;
+    print '</li>'.DOKU_LF;
+  }
+?>

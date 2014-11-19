@@ -1,0 +1,81 @@
+<?php
+/**
+ * Example footer include
+ *
+ * This file shows you how to use the include hooks. However I recommend to
+ * create your own complete new template instead. 
+ */
+ global $INFO;
+?>
+<?php 
+  if ( empty($INFO['userinfo']) ) {
+    $HEADER="display:none; "; 
+  } else { 
+    $HEADER="display:block; ";
+  }
+?>
+<!-- Header -->
+<!-- Only show the header if the user is logged in - it points to local sites mostly -->
+<div style="<?php echo $HEADER; ?> width: 550px; height: 23px; background: transparent url(<?php echo DOKU_TPL?>images/header_back.png) top left no-repeat; position: absolute; top: 0; left: 40%; margin-left: -245px; padding: 2px 10px 0 10px; font: 11px Arial;">
+  <form method="get" action="<?php echo DOKU_BASE?>doku.php" accept-charset="utf-8" class="search" id="dw__search">
+    <input type="hidden" name="do" value="search" />
+
+    <a target="_blank" href="/kplaylist/" title="Music Repository"><img src="<?php echo DOKU_TPL?>images/header_music.png" alt="Music" border="0" /></a>
+    <a target="_blank" href="/movies/" title="Movies"><img src="<?php echo DOKU_TPL?>images/header_movies.png" alt="Movies" border="0" /></a>
+    <a target="_blank" href="/tv/" title="TV Shows"><img src="<?php echo DOKU_TPL?>images/header_tv.png" alt="TV" border="0" /></a>
+    <a target="_blank" href="http://dic.naver.com/?frm=nt" title="Dictionary"><img src="<?php echo DOKU_TPL?>images/header_dictionary.png" alt="Dictionary" border="0" /></a>
+    <a target="_blank" href="/gallery/" title="Gallery"><img src="<?php echo DOKU_TPL?>images/header_gallery.png" alt="Gallery" border="0" /></a>
+    <a href="/redmine" title="Redmine"><img src="<?php echo DOKU_TPL?>images/header_code.png" alt="Redmine" border="0" /></a>
+    <a href="<?php echo DOKU_BASE?>doku.php/en:help:help" title="Help pages for DokuDoodles"><img src="<?php echo DOKU_TPL?>images/help.png" alt="Help" border="0" /></a>
+    <input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[ALT+F]" style="border: none; background: transparent url(<?php echo DOKU_TPL?>images/header_searchbox.png) top left no-repeat; vertical-align: top; font: 10px sans-serif; width: 111px; height: 17px; margin: 0 0 0 30px; padding: 2px 4px; display: inline;" />
+    <input type="image" src="<?php echo DOKU_TPL?>images/header_search.png" alt="Search" title="Search this site" />
+  </form>
+</div>
+
+<!-- Footer -->
+
+<div align="center" class="footerinc">
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="<?php echo DOKU_TPL?>images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0" /></a>
+
+  <a target="_blank" href="http://gmail.com/" title="Mail"><img src="<?php echo DOKU_TPL?>images/footer_gmail.png" width="80" height="15" alt="Mail" border="0" /></a>
+  
+  <a target="_blank" href="http://www.naver.com/" title="Naver"><img src="<?php echo DOKU_TPL?>images/footer_naver.png" width="80" height="15" alt="Naver" border="0" /></a>
+
+  <a target="_blank" href="http://www.daum.net/" title="Daum"><img src="<?php echo DOKU_TPL?>images/footer_daum.png" width="80" height="15" alt="Daum" border="0" /></a>
+
+  <a target="_blank" href="http://www.cricinfo.com/" title="Cricket"><img src="<?php echo DOKU_TPL?>images/footer_cricinfo.png" width="80" height="15" alt="Cricket" border="0" /></a>
+  
+  <a target="_blank" href="http://slashdot.org/" title="Slashdot"><img src="<?php echo DOKU_TPL?>images/footer_slashdot.png" width="80" height="15" alt="Slashdot" border="0" /></a>
+  
+  <a target="_blank" href="/gallery/" title="Snorriheim photo gallery"><img src="<?php echo DOKU_TPL?>images/footer_gallery.png" width="80" height="15" alt="snorriheim gallery" border="0" /></a>
+<?php
+/*
+ * The following stuff in HTML comments declares a Creative Commons
+ * License - remove this if you don't want this license for your Wiki
+ */
+?>
+
+<!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+
+-->
+</div>
