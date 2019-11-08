@@ -65,7 +65,7 @@ class syntax_plugin_multilingual extends DokuWiki_Syntax_Plugin {
     /**
      * Create output
      */
-    function render($format, &$renderer, $data) {
+    function render($format, Doku_Renderer $renderer, $data) {
         // store info in metadata
         if($format == 'metadata'){
             $renderer->meta['plugin']['multilingual']['notrans'] = true;
